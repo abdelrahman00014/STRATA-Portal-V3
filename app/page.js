@@ -21,6 +21,7 @@ export default function Home() {
       </section>
 
       <section className="bg-white p-6 rounded-lg shadow-md mb-8">
+<<<<<<< HEAD
         <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
         <ul className="space-y-2">
           <li><a href="/committee" className="text-blue-600 hover:underline">Committee Members</a></li>
@@ -36,3 +37,7 @@ export default function Home() {
     </div>
   );
 }
+=======
+        <h2 className="text-xl font-semibold mb-4">Quick Links
+
+>>>>>>> a94cc06 (Added homepage as JS version)
