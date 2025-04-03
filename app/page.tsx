@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Home(): React.ReactNode {
+export default function Home() {
   return (
     <div className="container mx-auto px-4 py-8">
       <header className="text-center mb-8">
