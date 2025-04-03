@@ -1,6 +1,8 @@
-export default function Home() {
+import React from 'react';
+
+export default function Home(): React.ReactNode {
   return (
-    <main className="min-h-screen p-8">
+    <div className="min-h-screen p-8">
       <header className="text-center mb-10">
         <h1 className="text-3xl font-bold text-blue-800">StrataSphere Management Portal</h1>
         <p className="text-gray-600">Simplifying community living through effective management</p>
@@ -25,3 +27,14 @@ export default function Home() {
         <ul className="space-y-2">
           <li><a href="/committee" className="text-blue-600 hover:underline">Committee Members</a></li>
           <li><a href="/financial" className="text-blue-600 hover:underline">Financial Information</a></li>
+          <li><a href="/maintenance" className="text-blue-600 hover:underline">Maintenance Requests</a></li>
+          <li><a href="/documents" className="text-blue-600 hover:underline">Building Documents</a></li>
+        </ul>
+      </section>
+
+      <footer className="text-center mt-12 text-gray-600 text-sm">
+        <p>© 2025 StrataSphere Management | Contact: admin@stratasphere.com</p>
+      </footer>
+    </div>
+  );
+}
