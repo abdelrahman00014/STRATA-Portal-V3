@@ -12,29 +12,19 @@ body {
   background: rgb(var(--background-rgb));
 }
 
-.prose a {
-  @apply underline text-blue-600;
-}
-
-/* Add these styles for the red/orange boxes */
+/* Style for the white boxes */
 .bg-white {
   background-color: #ff6b35 !important; /* Orange/red color */
-  color: white;
+  color: white !important;
 }
 
-/* Keep link text readable on orange background */
+/* Make links visible on orange background */
 .bg-white a {
-  color: #f0f0f0;
+  color: white !important;
   font-weight: bold;
 }
 
-/* Make headings in the boxes stand out */
-.bg-white h2, .bg-white h3 {
-  color: white;
-  font-weight: bold;
-}
-
-/* Date text more visible */
-.text-gray-500 {
+/* Make dates and text on orange background visible */
+.text-gray-500, .text-sm {
   color: rgba(255, 255, 255, 0.8) !important;
 }
