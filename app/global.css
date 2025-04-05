@@ -2,136 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ::selection styling */
-::selection {
-  background-color: #47a3f3;
-  color: #fefefe;
-}
-
-/* Syntax Highlighting Variables */
 :root {
-  --sh-class: #2d5e9d;
-  --sh-identifier: #354150;
-  --sh-sign: #8996a3;
-  --sh-string: #007f7a;
-  --sh-keyword: #e02518;
-  --sh-comment: #a19595;
-  --sh-jsxliterals: #6266d1;
-  --sh-property: #e25a1c;
-  --sh-entity: #e25a1c;
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 240, 240, 240;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --sh-class: #4c97f8;
-    --sh-identifier: white;
-    --sh-keyword: #f47067;
-    --sh-string: #0fa295;
-  }
-
-  html {
-    color-scheme: dark;
-  }
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
 }
 
-html {
-  min-width: 360px;
-}
-
-/* Headings, links, and anchor elements */
 .prose a {
-  @apply underline text-blue-700 dark:text-blue-400 transition-all underline-offset-2;
+  @apply underline text-blue-600;
 }
 
-.prose .anchor {
-  @apply absolute invisible no-underline ml-[-1em] pr-2 w-[80%] max-w-[700px] cursor-pointer;
+/* Add these styles for the red/orange boxes */
+.bg-white {
+  background-color: #ff6b35 !important; /* Orange/red color */
+  color: white;
 }
 
-.prose *:hover > .anchor {
-  @apply visible;
+/* Keep link text readable on orange background */
+.bg-white a {
+  color: #f0f0f0;
+  font-weight: bold;
 }
 
-.prose .anchor:after {
-  content: "#";
-  @apply text-gray-400 dark:text-gray-600;
+/* Make headings in the boxes stand out */
+.bg-white h2, .bg-white h3 {
+  color: white;
+  font-weight: bold;
 }
 
-/* Code blocks */
-.prose pre {
-  @apply bg-gray-100 dark:bg-gray-900 rounded-lg overflow-x-auto border border-gray-300 dark:border-gray-800 py-2 px-3 text-sm;
-}
-
-.prose code {
-  @apply px-1 py-0.5 rounded bg-gray-200 dark:bg-gray-800 text-red-500;
-}
-
-.prose pre code {
-  @apply p-0;
-  border: initial;
-  line-height: 1.5;
-}
-
-.prose code span {
-  @apply font-medium;
-}
-
-/* Paragraphs and headings */
-.prose p {
-  @apply my-4 text-gray-800 dark:text-gray-200;
-}
-
-.prose h1 {
-  @apply text-4xl font-semibold tracking-tight mt-6 mb-2;
-}
-
-.prose h2,
-.prose h3,
-.prose h4 {
-  @apply text-xl font-semibold tracking-tight mt-6 mb-2;
-}
-
-/* Lists */
-.prose ul {
-  @apply list-disc pl-6;
-}
-
-.prose ol {
-  @apply list-decimal pl-6;
-}
-
-/* First-child spacing fix */
-.prose > :first-child {
-  margin-top: 1.25em !important;
-  margin-bottom: 1.25em !important;
-}
-
-/* Hide scrollbars for <pre> elements */
-pre::-webkit-scrollbar {
-  display: none;
-}
-
-pre {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-/* Safari iOS shadow fix */
-input[type="text"],
-input[type="email"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-/* Tables */
-table {
-  display: block;
-  max-width: fit-content;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-/* Title balance */
-.title {
-  text-wrap: balance;
+/* Date text more visible */
+.text-gray-500 {
+  color: rgba(255, 255, 255, 0.8) !important;
 }
