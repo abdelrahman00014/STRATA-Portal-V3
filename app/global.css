@@ -2,49 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Selection highlight */
-::selection {
-  background-color: #47a3f3;
-  color: #fff;
-}
-
-html, body {
-  min-width: 360px;
-  background-color: #f9fafb;
-  color: #1f2937;
-  font-family: 'Inter', sans-serif;
-}
-
 body {
-  @apply min-h-screen antialiased;
-}
-
-/* Typography */
-h1, h2, h3, h4, h5 {
-  @apply font-semibold text-gray-800;
+  background-color: black;
+  color: white;
 }
 
 a {
-  @apply text-blue-600 hover:underline;
+  color: #3b82f6;
+  text-decoration: underline;
 }
 
-section {
-  @apply bg-white p-6 rounded-lg shadow-md mb-8;
+.bg-white {
+  background-color: white;
+  color: black;
 }
 
-ul {
-  @apply list-disc pl-5 space-y-2;
+.text-gray-400 {
+  color: #9ca3af;
 }
 
-footer {
-  @apply text-center mt-12 text-gray-500 text-sm;
+.text-gray-600 {
+  color: #4b5563;
 }
 
-/* Layout for the homepage */
-main {
-  @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+.text-gray-700 {
+  color: #374151;
 }
 
-img {
-  @apply mx-auto max-w-full h-auto;
+.text-gray-800 {
+  color: #1f2937;
+}
+
+.text-blue-800 {
+  color: #1e40af;
 }
