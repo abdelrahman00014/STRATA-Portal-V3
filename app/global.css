@@ -28,6 +28,7 @@
     --sh-keyword: #f47067;
     --sh-string: #0fa295;
   }
+
   html {
     color-scheme: dark;
   }
@@ -37,17 +38,19 @@ html {
   min-width: 360px;
 }
 
-/* Headings, links, code formatting */
+/* Headings, links, and anchor elements */
 .prose a {
-  @apply underline text-blue-700 dark:text-blue-400 transition-all underline-offset-2 decoration-2;
+  @apply underline text-blue-700 dark:text-blue-400 transition-all underline-offset-2;
 }
 
 .prose .anchor {
   @apply absolute invisible no-underline ml-[-1em] pr-2 w-[80%] max-w-[700px] cursor-pointer;
 }
+
 .prose *:hover > .anchor {
   @apply visible;
 }
+
 .prose .anchor:after {
   content: "#";
   @apply text-gray-400 dark:text-gray-600;
@@ -57,14 +60,17 @@ html {
 .prose pre {
   @apply bg-gray-100 dark:bg-gray-900 rounded-lg overflow-x-auto border border-gray-300 dark:border-gray-800 py-2 px-3 text-sm;
 }
+
 .prose code {
   @apply px-1 py-0.5 rounded bg-gray-200 dark:bg-gray-800 text-red-500;
 }
+
 .prose pre code {
   @apply p-0;
   border: initial;
   line-height: 1.5;
 }
+
 .prose code span {
   @apply font-medium;
 }
@@ -73,9 +79,11 @@ html {
 .prose p {
   @apply my-4 text-gray-800 dark:text-gray-200;
 }
+
 .prose h1 {
   @apply text-4xl font-semibold tracking-tight mt-6 mb-2;
 }
+
 .prose h2,
 .prose h3,
 .prose h4 {
@@ -86,28 +94,30 @@ html {
 .prose ul {
   @apply list-disc pl-6;
 }
+
 .prose ol {
   @apply list-decimal pl-6;
 }
 
-/* First child spacing fix */
+/* First-child spacing fix */
 .prose > :first-child {
   margin-top: 1.25em !important;
   margin-bottom: 1.25em !important;
 }
 
-/* Hide scrollbars for code */
+/* Hide scrollbars for <pre> elements */
 pre::-webkit-scrollbar {
   display: none;
 }
+
 pre {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-/* Safari mobile input fix */
-input[type='text'],
-input[type='email'] {
+/* Safari iOS shadow fix */
+input[type="text"],
+input[type="email"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -121,7 +131,7 @@ table {
   white-space: nowrap;
 }
 
-/* Balanced title wrap */
+/* Title balance */
 .title {
   text-wrap: balance;
 }
