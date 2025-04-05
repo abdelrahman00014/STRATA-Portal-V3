@@ -2,17 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 240, 240, 240;
+::selection {
+  background-color: #47a3f3;
+  color: #fefefe;
+}
+
+html {
+  min-width: 360px;
+  background-color: #f9fafb;
+  color: #111827;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  @apply min-h-screen bg-gray-50 text-gray-900 antialiased;
 }
 
-.prose a {
-  @apply underline;
-  color: #2563eb; /* This is the blue-600 color */
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-semibold text-gray-800;
+}
+
+a {
+  @apply text-blue-600 hover:underline;
+}
+
+section {
+  @apply bg-white p-6 rounded-lg shadow-md mb-8;
+}
+
+ul {
+  @apply list-disc pl-5 space-y-2;
+}
+
+footer {
+  @apply text-center text-sm text-gray-500 mt-12;
 }
