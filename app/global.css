@@ -13,5 +13,6 @@ body {
 }
 
 .prose a {
-  @apply underline text-blue-600;
+  @apply underline;
+  color: #2563eb; /* This is the blue-600 color */
 }
