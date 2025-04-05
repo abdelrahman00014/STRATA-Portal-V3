@@ -1,63 +1,38 @@
 export default function Home() {
   return (
-    <div style={{ 
-      minHeight: '100vh', 
-      backgroundColor: 'black', 
-      color: 'white',
-      textAlign: 'center',
-      padding: '20px'
-    }}>
-      <nav style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginBottom: '40px' }}>
-        <a href="/" style={{ color: 'white', textDecoration: 'none' }}>home</a>
-        <a href="/blog" style={{ color: 'white', textDecoration: 'none' }}>blog</a>
-        <a href="/deploy" style={{ color: 'white', textDecoration: 'none' }}>deploy</a>
-      </nav>
+    <div className="min-h-screen p-8">
+      <header className="text-center mb-10">
+        <h1 className="text-3xl font-bold text-blue-800">StrataSphere Management Portal</h1>
+        <p className="text-gray-600">Simplifying community living through effective management</p>
+      </header>
 
-      <h1 style={{ fontSize: '2rem', marginBottom: '5px' }}>StrataSphere Management Portal</h1>
-      <p style={{ color: 'gray', marginBottom: '30px' }}>Your building management solution</p>
-
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', maxWidth: '800px', margin: '0 auto' }}>
-        {/* Left white box - Announcements */}
-        <div style={{ 
-          backgroundColor: 'white', 
-          color: 'black', 
-          padding: '20px', 
-          textAlign: 'left',
-          flex: 1
-        }}>
-          <p style={{ marginBottom: '30px' }}>May 15, 2025</p>
-          <p style={{ marginBottom: '30px' }}></p>
-          <p>April 10, 2025</p>
+      <section className="bg-white p-6 rounded-lg shadow-md mb-8">
+        <h2 className="text-xl font-semibold mb-4">Recent Announcements</h2>
+        <div className="border-b pb-4 mb-4">
+          <h3 className="font-medium">Annual General Meeting</h3>
+          <p className="text-sm text-gray-500">May 15, 2025</p>
+          <p>All owners are invited to attend the AGM in the common area.</p>
         </div>
-
-        {/* Right white box - Links */}
-        <div style={{ 
-          backgroundColor: 'white', 
-          color: 'black', 
-          padding: '20px', 
-          textAlign: 'left',
-          flex: 1
-        }}>
-          <a href="/committee" style={{ display: 'block', color: 'blue', marginBottom: '10px' }}>Committee Members</a>
-          <a href="/documents" style={{ display: 'block', color: 'blue', marginBottom: '10px' }}>Documents Repository</a>
-          <a href="/maintenance" style={{ display: 'block', color: 'blue', marginBottom: '10px' }}>Maintenance Requests</a>
-          <a href="/financial" style={{ display: 'block', color: 'blue', marginBottom: '10px' }}>Financial Information</a>
+        <div>
+          <h3 className="font-medium">Building Maintenance</h3>
+          <p className="text-sm text-gray-500">April 12, 2025</p>
+          <p>Exterior painting will begin next week. Please clear all items from balconies.</p>
         </div>
-      </div>
+      </section>
 
-      <footer style={{ marginTop: '30px', color: 'gray', fontSize: '0.9rem' }}>
-        © 2025 StrataSphere Management | Contact: admin@stratasphere.com
+      <section className="bg-white p-6 rounded-lg shadow-md mb-8">
+        <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
+        <ul className="space-y-2">
+          <li><a href="/committee" className="text-blue-600 hover:underline">Committee Members</a></li>
+          <li><a href="/financial" className="text-blue-600 hover:underline">Financial Information</a></li>
+          <li><a href="/maintenance" className="text-blue-600 hover:underline">Maintenance Requests</a></li>
+          <li><a href="/documents" className="text-blue-600 hover:underline">Building Documents</a></li>
+        </ul>
+      </section>
+
+      <footer className="text-center mt-12 text-gray-600 text-sm">
+        <p>© 2025 StrataSphere Management | Contact: admin@stratasphere.com</p>
       </footer>
-
-      <div style={{ marginTop: '20px' }}>
-        <a href="/rss" style={{ color: 'gray', marginRight: '10px' }}>rss</a>
-        <a href="https://github.com" style={{ color: 'gray', marginRight: '10px' }}>github</a>
-        <a href="/source" style={{ color: 'gray' }}>view source</a>
-      </div>
-
-      <div style={{ marginTop: '10px', color: 'gray' }}>
-        © 2025 MIT Licensed
-      </div>
     </div>
   );
 }
