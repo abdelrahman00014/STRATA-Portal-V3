@@ -15,11 +15,5 @@
       "statusCode": 302
     }
   ],
-  "regions": ["iad1"],
-  "cron": [
-    {
-      "path": "/api/edge/time",
-      "schedule": "0 * * * *"
-    }
-  ]
+  "regions": ["iad1"]
 }
