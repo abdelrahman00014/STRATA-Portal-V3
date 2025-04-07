@@ -1,19 +1,8 @@
 {
+  "regions": ["iad1"],
   "buildCommand": "pnpm run build",
-  "outputDirectory": ".next",
-  "cleanUrls": true,
+  "outputDirectory": "out",
   "rewrites": [
-    {
-      "source": "/home",
-      "destination": "/"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/support",
-      "destination": "/contact",
-      "statusCode": 302
-    }
-  ],
-  "regions": ["iad1"]
+    { "source": "/form", "destination": "/api/form-handler" }
+  ]
 }
