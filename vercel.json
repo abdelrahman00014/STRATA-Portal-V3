@@ -1,8 +1,10 @@
 {
-  "regions": ["iad1"],
-  "buildCommand": "pnpm run build",
-  "outputDirectory": "out",
-  "rewrites": [
-    { "source": "/form", "destination": "/api/form-handler" }
+  "version": 2,
+  "regions": ["syd1"],
+  "crons": [
+    {
+      "path": "/api/send-meeting-reminders",
+      "schedule": "0 9 * * 1"
+    }
   ]
 }
