@@ -1,10 +1,25 @@
 {
-  "version": 2,
-  "regions": ["syd1"],
-  "crons": [
+  "buildCommand": "pnpm run build",
+  "outputDirectory": ".next",
+  "cleanUrls": true,
+  "rewrites": [
     {
-      "path": "/api/send-meeting-reminders",
-      "schedule": "0 9 * * 1"
+      "source": "/home",
+      "destination": "/"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/support",
+      "destination": "/contact",
+      "statusCode": 302
+    }
+  ],
+  "regions": ["iad1"],
+  "cron": [
+    {
+      "path": "/api/edge/time",
+      "schedule": "0 * * * *"
     }
   ]
 }
