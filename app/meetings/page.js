@@ -9,7 +9,7 @@ export default function Meetings() {
     {
       id: 1,
       title: "Annual General Meeting",
-      date: "May 15,, 2025",
+      date: "May 15, 2025",
       time: "7:00 PM",
       location: "Building Common Room",
       agenda: [
@@ -30,6 +30,19 @@ export default function Meetings() {
         "Gardening Contract Renewal",
         "Pet Policy Review",
         "Budget Planning"
+      ]
+    },
+    {
+      id: 6,
+      title: "Special General Meeting",
+      date: "June 30, 2025",
+      time: "7:30 PM",
+      location: "Building Common Room",
+      agenda: [
+        "Special Resolution: Building Facade Upgrade",
+        "Security System Discussion",
+        "Community Events Planning",
+        "Budget Approval"
       ]
     }
   ];
@@ -86,12 +99,12 @@ export default function Meetings() {
           
           <div className="space-y-6">
             {upcomingMeetings.map(meeting => (
-              <div key={meeting.id} className="bg-gray-200 p-6 rounded shadow border border-gray-300">
+              <div key={meeting.id} className="bg-white p-6 rounded shadow border border-gray-300">
                 <h2 className="text-xl font-bold mb-2 text-gray-900">{meeting.title}</h2>
                 <div className="mb-4">
-                  <p className="text-gray-900"><span className="font-bold text-gray-900">Date:</span> <span className="text-gray-900">{meeting.date}</span></p>
-                  <p className="text-gray-900"><span className="font-bold text-gray-900">Time:</span> <span className="text-gray-900">{meeting.time}</span></p>
-                  <p className="text-gray-900"><span className="font-bold text-gray-900">Location:</span> <span className="text-gray-900">{meeting.location}</span></p>
+                  <p className="text-gray-900"><span className="font-bold">Date:</span> {meeting.date}</p>
+                  <p className="text-gray-900"><span className="font-bold">Time:</span> {meeting.time}</p>
+                  <p className="text-gray-900"><span className="font-bold">Location:</span> {meeting.location}</p>
                 </div>
                 
                 <div>
@@ -103,8 +116,8 @@ export default function Meetings() {
                   </ul>
                 </div>
                 
-                <button className="mt-4 bg-blue-700 text-white font-bold px-4 py-2 rounded hover:bg-blue-800">
-                  <span className="text-white">Add to Calendar</span>
+                <button className="mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold px-4 py-2 rounded">
+                  Add to Calendar
                 </button>
               </div>
             ))}
@@ -116,19 +129,19 @@ export default function Meetings() {
           
           <div className="space-y-6">
             {pastMeetings.map(meeting => (
-              <div key={meeting.id} className="bg-gray-200 p-6 rounded shadow border border-gray-300">
+              <div key={meeting.id} className="bg-white p-6 rounded shadow border border-gray-300">
                 <h2 className="text-xl font-bold mb-2 text-gray-900">{meeting.title}</h2>
                 <div className="mb-4">
-                  <p className="text-gray-900"><span className="font-bold text-gray-900">Date:</span> <span className="text-gray-900">{meeting.date}</span></p>
-                  <p className="text-gray-900"><span className="font-bold text-gray-900">Time:</span> <span className="text-gray-900">{meeting.time}</span></p>
-                  <p className="text-gray-900"><span className="font-bold text-gray-900">Location:</span> <span className="text-gray-900">{meeting.location}</span></p>
+                  <p className="text-gray-900"><span className="font-bold">Date:</span> {meeting.date}</p>
+                  <p className="text-gray-900"><span className="font-bold">Time:</span> {meeting.time}</p>
+                  <p className="text-gray-900"><span className="font-bold">Location:</span> {meeting.location}</p>
                 </div>
                 
                 <button 
-                  className="bg-green-700 text-white font-bold px-4 py-2 rounded hover:bg-green-800"
+                  className="bg-green-700 hover:bg-green-800 text-white font-bold px-4 py-2 rounded"
                   onClick={() => window.open(`/documents/${meeting.minutes}`, '_blank')}
                 >
-                  <span className="text-white">Download Minutes</span>
+                  Download Minutes
                 </button>
               </div>
             ))}
