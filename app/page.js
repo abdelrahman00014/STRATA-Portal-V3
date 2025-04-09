@@ -1,3 +1,5 @@
+'use client';
+
 export default function Home() {
   return (
     <div className="min-h-screen p-8">
@@ -11,10 +13,6 @@ export default function Home() {
           src="/building-banner.jpg" 
           alt="Modern apartment building" 
           className="w-full h-64 object-cover"
-          onError={(e) => {
-            e.target.onerror = null;
-            e.target.src = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80";
-          }}
         />
       </div>
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 const documentCategories = [
   {
@@ -107,6 +108,15 @@ export default function DocumentsPage() {
           ))}
         </div>
       </div>
+
+      <Image 
+        src="/building-banner.jpg"
+        alt="Modern apartment building"
+        width={1200}
+        height={400}
+        className="w-full h-64 object-cover"
+        priority
+      />
     </div>
   );
 } 
