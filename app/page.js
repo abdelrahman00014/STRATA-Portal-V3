@@ -6,6 +6,18 @@ export default function Home() {
         <p className="text-gray-600">Simplifying community living through effective management</p>
       </header>
 
+      <div className="mb-8 rounded-lg overflow-hidden shadow-md">
+        <img 
+          src="/building-banner.jpg" 
+          alt="Modern apartment building" 
+          className="w-full h-64 object-cover"
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80";
+          }}
+        />
+      </div>
+
       <section className="bg-white p-6 rounded-lg shadow-md mb-8">
         <h2 className="text-xl font-semibold mb-4">Recent Announcements</h2>
         <div className="border-b pb-4 mb-4">
@@ -20,15 +32,33 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white p-6 rounded-lg shadow-md mb-8">
-        <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
-        <ul className="space-y-2">
-          <li><a href="/committee" className="text-blue-600 hover:underline">Committee Members</a></li>
-          <li><a href="/financial" className="text-blue-600 hover:underline">Financial Information</a></li>
-          <li><a href="/maintenance" className="text-blue-600 hover:underline">Maintenance Requests</a></li>
-          <li><a href="/documents" className="text-blue-600 hover:underline">Building Documents</a></li>
-        </ul>
-      </section>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <section className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
+          <ul className="space-y-2">
+            <li><a href="/committee" className="text-blue-600 hover:underline">Committee Members</a></li>
+            <li><a href="/financial" className="text-blue-600 hover:underline">Financial Information</a></li>
+            <li><a href="/maintenance" className="text-blue-600 hover:underline">Maintenance Requests</a></li>
+            <li><a href="/documents" className="text-blue-600 hover:underline">Building Documents</a></li>
+          </ul>
+        </section>
+
+        <section className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-semibold mb-4">Upcoming Events</h2>
+          <div className="space-y-4">
+            <div className="border-l-4 border-blue-500 pl-4">
+              <h3 className="font-medium">Pool Maintenance</h3>
+              <p className="text-sm text-gray-500">April 20, 2025</p>
+              <p>Pool will be closed for maintenance.</p>
+            </div>
+            <div className="border-l-4 border-blue-500 pl-4">
+              <h3 className="font-medium">Community BBQ</h3>
+              <p className="text-sm text-gray-500">May 5, 2025</p>
+              <p>Join us for a community BBQ in the garden area.</p>
+            </div>
+          </div>
+        </section>
+      </div>
 
       <footer className="text-center mt-12 text-gray-600 text-sm">
         <p>© 2025 StrataSphere Management | Contact: admin@stratasphere.com</p>
