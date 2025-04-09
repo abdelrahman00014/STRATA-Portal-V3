@@ -48,12 +48,12 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        'text-black bg-white dark:text-white dark:bg-black',
+        'text-black bg-white',
         GeistSans.variable,
         GeistMono.variable
       )}
     >
-      <body className="antialiased min-h-screen">
+      <body className="antialiased min-h-screen bg-white">
         <main>
           <Navbar />
           {children}
