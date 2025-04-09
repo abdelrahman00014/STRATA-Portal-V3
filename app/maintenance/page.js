@@ -1,11 +1,13 @@
+'use client';
+
 export default function Maintenance() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Maintenance Requests</h1>
+      <h1 className="text-3xl font-bold mb-6 text-gray-800">Maintenance Requests</h1>
       
       <form className="bg-white p-6 rounded shadow" action="/api/maintenance" method="POST">
         <div className="mb-4">
-          <label htmlFor="unit" className="block mb-1">Unit Number:</label>
+          <label htmlFor="unit" className="block mb-1 text-gray-800">Unit Number:</label>
           <input 
             type="text" 
             id="unit" 
@@ -16,7 +18,7 @@ export default function Maintenance() {
         </div>
         
         <div className="mb-4">
-          <label htmlFor="issueType" className="block mb-1">Issue Type:</label>
+          <label htmlFor="issueType" className="block mb-1 text-gray-800">Issue Type:</label>
           <select 
             id="issueType" 
             name="issueType" 
@@ -32,7 +34,7 @@ export default function Maintenance() {
         </div>
         
         <div className="mb-4">
-          <label htmlFor="description" className="block mb-1">Description:</label>
+          <label htmlFor="description" className="block mb-1 text-gray-800">Description:</label>
           <textarea 
             id="description" 
             name="description" 

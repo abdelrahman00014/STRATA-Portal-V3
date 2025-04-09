@@ -45,7 +45,7 @@ export default function DocumentsPage() {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-8">Strata Documents</h1>
+      <h1 className="text-3xl font-bold mb-8 text-gray-800">Strata Documents</h1>
 
       <div className="space-y-6">
         <div className="flex gap-4 mb-6">
@@ -56,7 +56,7 @@ export default function DocumentsPage() {
               className={`px-4 py-2 rounded ${
                 selectedCategory === category.id
                   ? 'bg-blue-500 text-white'
-                  : 'bg-gray-200'
+                  : 'bg-gray-200 text-gray-800'
               }`}
             >
               {category.name}
@@ -81,7 +81,7 @@ export default function DocumentsPage() {
               className="border p-4 rounded-lg hover:bg-gray-50"
             >
               <div className="flex justify-between items-center">
-                <span className="font-medium">{doc.name}</span>
+                <span className="font-medium text-gray-800">{doc.name}</span>
                 <div className="space-x-2">
                   <button
                     className="bg-blue-500 text-white px-4 py-2 rounded"

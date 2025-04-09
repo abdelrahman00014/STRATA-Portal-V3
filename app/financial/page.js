@@ -10,18 +10,18 @@ export default function Financial() {
   
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Financial Information</h1>
+      <h1 className="text-3xl font-bold mb-6 text-gray-800">Financial Information</h1>
       
       <div className="bg-white p-6 rounded shadow mb-6">
-        <h2 className="text-xl font-semibold mb-4">Current Levy Rates</h2>
-        <p className="mb-2">Administration Fund: $2.50 per unit entitlement</p>
-        <p>Capital Works Fund: $1.75 per unit entitlement</p>
+        <h2 className="text-xl font-semibold mb-4 text-gray-800">Current Levy Rates</h2>
+        <p className="mb-2 text-gray-800">Administration Fund: $2.50 per unit entitlement</p>
+        <p className="text-gray-800">Capital Works Fund: $1.75 per unit entitlement</p>
       </div>
       
       <div className="bg-white p-6 rounded shadow">
-        <h2 className="text-xl font-semibold mb-4">Calculate Your Levy</h2>
+        <h2 className="text-xl font-semibold mb-4 text-gray-800">Calculate Your Levy</h2>
         <div className="mb-4">
-          <label htmlFor="entitlement" className="block mb-1">Your Unit Entitlement:</label>
+          <label htmlFor="entitlement" className="block mb-1 text-gray-800">Your Unit Entitlement:</label>
           <input 
             type="number" 
             id="entitlement" 
