@@ -23,20 +23,20 @@ export default function Footer() {
           <a
             className="flex items-center transition-all hover:text-gray-800"
             rel="noopener noreferrer"
-            href="/bylaws"
+            href="/facilities"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7 text-gray-800">Bylaws</p>
+            <p className="ml-2 h-7 text-gray-800">Facilities</p>
           </a>
         </li>
         <li>
           <a
             className="flex items-center transition-all hover:text-gray-800"
             rel="noopener noreferrer"
-            href="/meetings"
+            href="/contact-us"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7 text-gray-800">Meetings</p>
+            <p className="ml-2 h-7 text-gray-800">Contact Us</p>
           </a>
         </li>
         <li>

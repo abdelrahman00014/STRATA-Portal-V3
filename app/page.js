@@ -38,6 +38,8 @@ export default function Home() {
             <li><a href="/financial" className="text-blue-800 hover:underline font-medium">Financial Information</a></li>
             <li><a href="/maintenance" className="text-blue-800 hover:underline font-medium">Maintenance Requests</a></li>
             <li><a href="/documents" className="text-blue-800 hover:underline font-medium">Building Documents</a></li>
+            <li><a href="/facilities" className="text-blue-800 hover:underline font-medium">Building Facilities</a></li>
+            <li><a href="/contact-us" className="text-blue-800 hover:underline font-medium">Contact Us</a></li>
           </ul>
         </section>
 

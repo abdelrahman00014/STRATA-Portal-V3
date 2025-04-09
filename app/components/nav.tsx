@@ -16,11 +16,11 @@ const navItems = {
   '/documents': {
     name: 'Documents',
   },
-  '/meetings': {
-    name: 'Meetings',
+  '/contact-us': {
+    name: 'Contact Us',
   },
-  '/bylaws': {
-    name: 'Bylaws',
+  '/facilities': {
+    name: 'Facilities',
   },
 }
 
