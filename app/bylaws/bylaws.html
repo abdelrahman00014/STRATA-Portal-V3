@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Strata Bylaws</title>
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+        h1 {
+            color: #000000;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #000000;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        h3 {
+            color: #000000;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #000000;
+            line-height: 1.5;
+        }
+        .tabs {
+            margin-bottom: 20px;
+        }
+        .tab-button {
+            background-color: #cccccc;
+            color: #000000;
+            border: none;
+            padding: 10px 20px;
+            margin-right: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .tab-button.active {
+            background-color: #0066cc;
+            color: #ffffff;
+        }
+        .bylaw-section {
+            border: 2px solid #000000;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+        }
+        ul {
+            color: #000000;
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        li {
+            color: #000000;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Strata Bylaws</h1>
+        
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab('general')">General Rules</button>
+            <button class="tab-button" onclick="showTab('parking')">Parking Rules</button>
+            <button class="tab-button" onclick="showTab('pets')">Pet Rules</button>
+        </div>
+        
+        <div id="general-tab" class="bylaw-section">
+            <h2>General Rules</h2>
+            <p>These general rules apply to all residents and visitors of the building:</p>
+            <ul>
+                <li>Quiet hours are from 10 PM to 7 AM</li>
+                <li>No smoking in common areas</li>
+                <li>Keep common areas clean and tidy</li>
+                <li>Report maintenance issues promptly</li>
+                <li>No alterations to external appearance without committee approval</li>
+                <li>Disposal of large items must be arranged with management</li>
+                <li>Entry doors must not be propped open</li>
+                <li>All residents must maintain current contact information with management</li>
+            </ul>
+            <p>Residents are responsible for ensuring their guests comply with all bylaws during their visit.</p>
+        </div>
+        
+        <div id="parking-tab" class="bylaw-section" style="display: none;">
+            <h2>Parking Rules</h2>
+            <p>All vehicle parking within the property is subject to the following rules:</p>
+            <ul>
+                <li>Park only in designated spots</li>
+                <li>No overnight guest parking without permission</li>
+                <li>Keep driveways clear at all times</li>
+                <li>No vehicle maintenance in parking areas</li>
+                <li>Speed limit of 5 km/h in all parking areas</li>
+                <li>No storage of unregistered vehicles</li>
+                <li>No washing of vehicles in parking areas</li>
+                <li>Visitor parking limited to 24 hours unless approved</li>
+            </ul>
+            <p>Violations of parking rules may result in vehicles being towed at the owner's expense.</p>
+        </div>
+        
+        <div id="pets-tab" class="bylaw-section" style="display: none;">
+            <h2>Pet Rules</h2>
+            <p>Pets are allowed within the building subject to the following conditions:</p>
+            <ul>
+                <li>Pets must be on leash in common areas</li>
+                <li>Clean up after your pets</li>
+                <li>No pets allowed in pool area</li>
+                <li>Maximum 2 pets per unit</li>
+                <li>All pets must be registered with management</li>
+                <li>No exotic animals permitted</li>
+                <li>Pets must not create excessive noise</li>
+                <li>Pet owners are responsible for any damage caused by their pets</li>
+            </ul>
+            <p>The committee reserves the right to revoke pet permissions for repeated bylaw violations.</p>
+        </div>
+    </div>
+    
+    <script>
+        function showTab(tabName) {
+            // Hide all tabs
+            document.getElementById('general-tab').style.display = 'none';
+            document.getElementById('parking-tab').style.display = 'none';
+            document.getElementById('pets-tab').style.display = 'none';
+            
+            // Show selected tab
+            document.getElementById(tabName + '-tab').style.display = 'block';
+            
+            // Update active button
+            var buttons = document.getElementsByClassName('tab-button');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('active');
+            }
+            
+            if (tabName === 'general') {
+                buttons[0].classList.add('active');
+            } else if (tabName === 'parking') {
+                buttons[1].classList.add('active');
+            } else {
+                buttons[2].classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html> 

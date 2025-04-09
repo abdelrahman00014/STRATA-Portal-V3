@@ -8,8 +8,8 @@
             box-sizing: border-box;
         }
         body {
-            background-color: #ffffff;
-            color: #000000;
+            background-color: #e5e7eb;
+            color: #111827;
             margin: 0;
             padding: 20px;
         }
@@ -17,44 +17,48 @@
             width: 100%;
             max-width: 800px;
             margin: 0 auto;
-            background-color: #ffffff;
-            border: 1px solid #000000;
+            background-color: #f8fafc;
+            border: 1px solid #334155;
             padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
         h1 {
-            color: #000000;
+            color: #111827;
             font-size: 24px;
             margin-bottom: 20px;
             text-align: center;
+            font-weight: 700;
         }
         h2 {
-            color: #000000;
+            color: #1e3a8a;
             font-size: 20px;
             margin-top: 30px;
             margin-bottom: 15px;
-            border-bottom: 1px solid #000000;
+            border-bottom: 1px solid #64748b;
             padding-bottom: 5px;
         }
         h3 {
-            color: #000000;
+            color: #1e40af;
             font-size: 18px;
             margin-top: 20px;
             margin-bottom: 10px;
+            font-weight: 600;
         }
         p {
-            color: #000000;
-            line-height: 1.6;
+            color: #111827;
+            line-height: 1.7;
             margin-bottom: 15px;
+            font-size: 16px;
         }
         .tabs {
             display: flex;
             margin-bottom: 20px;
-            border-bottom: 1px solid #000000;
+            border-bottom: 1px solid #334155;
         }
         .tab-button {
-            background-color: #dddddd;
-            color: #000000;
-            border: 1px solid #000000;
+            background-color: #cbd5e1;
+            color: #111827;
+            border: 1px solid #334155;
             border-bottom: none;
             padding: 10px 20px;
             margin-right: 5px;
@@ -62,10 +66,10 @@
             font-weight: bold;
         }
         .tab-button.active {
-            background-color: #ffffff;
+            background-color: #f8fafc;
             position: relative;
             bottom: -1px;
-            border-bottom: 1px solid #ffffff;
+            border-bottom: 1px solid #f8fafc;
         }
         .tab-content {
             display: none;
@@ -74,26 +78,43 @@
             display: block;
         }
         ul, ol {
-            color: #000000;
+            color: #111827;
             margin-bottom: 15px;
             padding-left: 25px;
         }
         li {
-            color: #000000;
+            color: #111827;
             margin-bottom: 8px;
+            font-size: 16px;
+            line-height: 1.6;
         }
         .section {
             margin-bottom: 30px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 4px solid #3b82f6;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
         .print-button {
-            background-color: #000000;
+            background-color: #1d4ed8;
             color: #ffffff;
             border: none;
-            padding: 10px 15px;
+            padding: 12px 20px;
             cursor: pointer;
             font-weight: bold;
             display: block;
             margin: 20px auto;
+            font-size: 16px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .print-button:hover {
+            background-color: #1e40af;
+        }
+        strong {
+            font-weight: 700;
+            color: #111827;
         }
     </style>
 </head>
