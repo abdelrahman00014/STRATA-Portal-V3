@@ -9,7 +9,7 @@ export default function Meetings() {
     {
       id: 1,
       title: "Annual General Meeting",
-      date: "May 15, 2025",
+      date: "May 15,, 2025",
       time: "7:00 PM",
       location: "Building Common Room",
       agenda: [
@@ -62,48 +62,48 @@ export default function Meetings() {
   ];
   
   return (
-    <div className="container mx-auto px-4 py-8 bg-gray-50">
-      <h1 className="text-3xl font-bold mb-6 text-gray-800">Strata Meetings</h1>
+    <div className="container mx-auto px-4 py-8 bg-slate-100">
+      <h1 className="text-3xl font-bold mb-6 text-gray-900">Strata Meetings</h1>
       
       <div className="flex space-x-2 mb-6">
         <button 
           onClick={() => setActiveTab('upcoming')}
-          className={`px-4 py-2 rounded font-medium ${activeTab === 'upcoming' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800'}`}
+          className={`px-4 py-2 rounded font-medium ${activeTab === 'upcoming' ? 'bg-blue-700 text-white' : 'bg-gray-300 text-gray-900'}`}
         >
-          <span className={activeTab === 'upcoming' ? 'text-white' : 'text-gray-800'}>Upcoming Meetings</span>
+          <span className={activeTab === 'upcoming' ? 'text-white' : 'text-gray-900'}>Upcoming Meetings</span>
         </button>
         <button 
           onClick={() => setActiveTab('past')}
-          className={`px-4 py-2 rounded font-medium ${activeTab === 'past' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800'}`}
+          className={`px-4 py-2 rounded font-medium ${activeTab === 'past' ? 'bg-blue-700 text-white' : 'bg-gray-300 text-gray-900'}`}
         >
-          <span className={activeTab === 'past' ? 'text-white' : 'text-gray-800'}>Past Meetings</span>
+          <span className={activeTab === 'past' ? 'text-white' : 'text-gray-900'}>Past Meetings</span>
         </button>
       </div>
       
       {activeTab === 'upcoming' ? (
         <div>
-          <p className="mb-4 text-gray-800">Below are the upcoming meetings scheduled for our strata community. All residents are welcome to attend.</p>
+          <p className="mb-4 text-gray-900 font-medium">Below are the upcoming meetings scheduled for our strata community. All residents are welcome to attend.</p>
           
           <div className="space-y-6">
             {upcomingMeetings.map(meeting => (
-              <div key={meeting.id} className="bg-white p-6 rounded shadow">
-                <h2 className="text-xl font-semibold mb-2 text-gray-800">{meeting.title}</h2>
+              <div key={meeting.id} className="bg-gray-200 p-6 rounded shadow border border-gray-300">
+                <h2 className="text-xl font-bold mb-2 text-gray-900">{meeting.title}</h2>
                 <div className="mb-4">
-                  <p className="text-gray-800"><span className="font-medium text-gray-800">Date:</span> <span className="text-gray-800">{meeting.date}</span></p>
-                  <p className="text-gray-800"><span className="font-medium text-gray-800">Time:</span> <span className="text-gray-800">{meeting.time}</span></p>
-                  <p className="text-gray-800"><span className="font-medium text-gray-800">Location:</span> <span className="text-gray-800">{meeting.location}</span></p>
+                  <p className="text-gray-900"><span className="font-bold text-gray-900">Date:</span> <span className="text-gray-900">{meeting.date}</span></p>
+                  <p className="text-gray-900"><span className="font-bold text-gray-900">Time:</span> <span className="text-gray-900">{meeting.time}</span></p>
+                  <p className="text-gray-900"><span className="font-bold text-gray-900">Location:</span> <span className="text-gray-900">{meeting.location}</span></p>
                 </div>
                 
                 <div>
-                  <h3 className="font-medium mb-2 text-gray-800">Agenda:</h3>
+                  <h3 className="font-bold mb-2 text-gray-900">Agenda:</h3>
                   <ul className="list-disc pl-5">
                     {meeting.agenda.map((item, index) => (
-                      <li key={index} className="text-gray-800">{item}</li>
+                      <li key={index} className="text-gray-900">{item}</li>
                     ))}
                   </ul>
                 </div>
                 
-                <button className="mt-4 bg-blue-600 text-white font-medium px-4 py-2 rounded hover:bg-blue-700">
+                <button className="mt-4 bg-blue-700 text-white font-bold px-4 py-2 rounded hover:bg-blue-800">
                   <span className="text-white">Add to Calendar</span>
                 </button>
               </div>
@@ -112,20 +112,20 @@ export default function Meetings() {
         </div>
       ) : (
         <div>
-          <p className="mb-4 text-gray-800">Past meetings with downloadable minutes for your reference.</p>
+          <p className="mb-4 text-gray-900 font-medium">Past meetings with downloadable minutes for your reference.</p>
           
           <div className="space-y-6">
             {pastMeetings.map(meeting => (
-              <div key={meeting.id} className="bg-white p-6 rounded shadow">
-                <h2 className="text-xl font-semibold mb-2 text-gray-800">{meeting.title}</h2>
+              <div key={meeting.id} className="bg-gray-200 p-6 rounded shadow border border-gray-300">
+                <h2 className="text-xl font-bold mb-2 text-gray-900">{meeting.title}</h2>
                 <div className="mb-4">
-                  <p className="text-gray-800"><span className="font-medium text-gray-800">Date:</span> <span className="text-gray-800">{meeting.date}</span></p>
-                  <p className="text-gray-800"><span className="font-medium text-gray-800">Time:</span> <span className="text-gray-800">{meeting.time}</span></p>
-                  <p className="text-gray-800"><span className="font-medium text-gray-800">Location:</span> <span className="text-gray-800">{meeting.location}</span></p>
+                  <p className="text-gray-900"><span className="font-bold text-gray-900">Date:</span> <span className="text-gray-900">{meeting.date}</span></p>
+                  <p className="text-gray-900"><span className="font-bold text-gray-900">Time:</span> <span className="text-gray-900">{meeting.time}</span></p>
+                  <p className="text-gray-900"><span className="font-bold text-gray-900">Location:</span> <span className="text-gray-900">{meeting.location}</span></p>
                 </div>
                 
                 <button 
-                  className="bg-green-600 text-white font-medium px-4 py-2 rounded hover:bg-green-700"
+                  className="bg-green-700 text-white font-bold px-4 py-2 rounded hover:bg-green-800"
                   onClick={() => window.open(`/documents/${meeting.minutes}`, '_blank')}
                 >
                   <span className="text-white">Download Minutes</span>
