@@ -8,27 +8,27 @@ const documentCategories = [
     id: 'bylaws',
     name: 'Bylaws',
     documents: [
-      { name: 'Building Bylaws', url: '/documents/bylaws.pdf' },
-      { name: 'Pet Policy', url: '/documents/pet-policy.pdf' },
-      { name: 'Parking Regulations', url: '/documents/parking.pdf' },
+      { name: 'Building Bylaws', url: '/documents/bylaws.html' },
+      { name: 'Pet Policy', url: '/documents/pet-policy.html' },
+      { name: 'Parking Regulations', url: '/documents/bylaws.html#4-parking' },
     ],
   },
   {
     id: 'financial',
     name: 'Financial Documents',
     documents: [
-      { name: '2024 Budget', url: '/documents/budget-2024.pdf' },
-      { name: 'Financial Statements Q1 2024', url: '/documents/financial-q1-2024.pdf' },
-      { name: 'Insurance Policy', url: '/documents/insurance.pdf' },
+      { name: '2024 Budget', url: '/documents/budget-2024.html' },
+      { name: 'Financial Statements Q1 2024', url: '/documents/budget-2024.html' },
+      { name: 'Insurance Policy', url: '/documents/budget-2024.html' },
     ],
   },
   {
     id: 'meetings',
     name: 'Meeting Minutes',
     documents: [
-      { name: 'March 2024 Minutes', url: '/documents/minutes-march-2024.pdf' },
-      { name: 'February 2024 Minutes', url: '/documents/minutes-february-2024.pdf' },
-      { name: 'January 2024 Minutes', url: '/documents/minutes-january-2024.pdf' },
+      { name: 'March 2024 Minutes', url: '/documents/bylaws.html' },
+      { name: 'February 2024 Minutes', url: '/documents/pet-policy.html' },
+      { name: 'January 2024 Minutes', url: '/documents/budget-2024.html' },
     ],
   },
 ];

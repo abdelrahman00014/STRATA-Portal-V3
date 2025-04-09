@@ -131,7 +131,7 @@ export default function Maintenance() {
               name="unit" 
               value={formData.unit}
               onChange={handleChange}
-              className="border p-2 w-full" 
+              className="border p-2 w-full bg-white text-black" 
               required 
             />
           </div>
@@ -143,7 +143,7 @@ export default function Maintenance() {
               name="issueType" 
               value={formData.issueType}
               onChange={handleChange}
-              className="border p-2 w-full" 
+              className="border p-2 w-full bg-white text-black" 
               required
             >
               <option value="">Select...</option>
@@ -161,7 +161,7 @@ export default function Maintenance() {
               name="priority" 
               value={formData.priority}
               onChange={handleChange}
-              className="border p-2 w-full" 
+              className="border p-2 w-full bg-white text-black" 
             >
               <option value="low">Low</option>
               <option value="normal">Normal</option>
@@ -178,7 +178,7 @@ export default function Maintenance() {
               value={formData.description}
               onChange={handleChange}
               rows="4" 
-              className="border p-2 w-full" 
+              className="border p-2 w-full bg-white text-black" 
               required
             ></textarea>
           </div>
