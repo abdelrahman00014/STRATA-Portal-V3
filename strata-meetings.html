@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strata Meetings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #000000;
+        }
+        h1, h2, h3, h4, h5, h6, p, li, a, span, div {
+            color: #000000;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .tab-buttons {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .tab-button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .tab-button.active {
+            background-color: #0047AB;
+            color: white;
+        }
+        .tab-button.inactive {
+            background-color: #cccccc;
+            color: black;
+        }
+        .meeting-card {
+            border: 2px solid #000000;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+        }
+        .meeting-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+        .meeting-info {
+            margin-bottom: 15px;
+            color: #000000;
+        }
+        .meeting-info p {
+            margin: 5px 0;
+            color: #000000;
+        }
+        .agenda-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+        .agenda-list {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            color: #000000;
+        }
+        .agenda-list li {
+            margin-bottom: 5px;
+            color: #000000;
+        }
+        .blue-button {
+            background-color: #0047AB;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .minutes-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        .minutes-item {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+        .minutes-link {
+            color: #0047AB;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .minutes-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: #000000; font-size: 24px; font-weight: bold;">Strata Meetings</h1>
+        
+        <div class="tab-buttons">
+            <button class="tab-button active">Upcoming Meetings</button>
+            <button class="tab-button inactive">Past Meetings</button>
+        </div>
+        
+        <h2 style="color: #000000; font-size: 20px; font-weight: bold;">Upcoming Meetings</h2>
+        
+        <div class="meeting-card">
+            <h3 class="meeting-title" style="color: #000000;">Annual General Meeting</h3>
+            <div class="meeting-info">
+                <p style="color: #000000;"><strong style="color: #000000;">Date:</strong> April 15, 2024</p>
+                <p style="color: #000000;"><strong style="color: #000000;">Time:</strong> 7:00 PM</p>
+                <p style="color: #000000;"><strong style="color: #000000;">Location:</strong> Building Common Room</p>
+            </div>
+            
+            <h4 class="agenda-title" style="color: #000000;">Agenda:</h4>
+            <ul class="agenda-list">
+                <li style="color: #000000;">Financial Report 2023-2024</li>
+                <li style="color: #000000;">Committee Elections</li>
+                <li style="color: #000000;">Building Maintenance Plan</li>
+                <li style="color: #000000;">General Business</li>
+            </ul>
+            
+            <button class="blue-button">Add to Calendar</button>
+        </div>
+        
+        <div class="meeting-card">
+            <h3 class="meeting-title" style="color: #000000;">Committee Meeting</h3>
+            <div class="meeting-info">
+                <p style="color: #000000;"><strong style="color: #000000;">Date:</strong> May 20, 2024</p>
+                <p style="color: #000000;"><strong style="color: #000000;">Time:</strong> 6:30 PM</p>
+                <p style="color: #000000;"><strong style="color: #000000;">Location:</strong> Online (Zoom)</p>
+                <p style="color: #000000;"><strong style="color: #000000;">Additional Info:</strong> Please bring your meeting materials and identification.</p>
+            </div>
+            
+            <h4 class="agenda-title" style="color: #000000;">Agenda:</h4>
+            <ul class="agenda-list">
+                <li style="color: #000000;">Security System Upgrade</li>
+                <li style="color: #000000;">Gardening Contract Renewal</li>
+                <li style="color: #000000;">Pet Policy Review</li>
+                <li style="color: #000000;">Budget Planning</li>
+            </ul>
+            
+            <button class="blue-button">Add to Calendar</button>
+        </div>
+        
+        <div class="meeting-card">
+            <h3 class="meeting-title" style="color: #000000;">Special General Meeting</h3>
+            <div class="meeting-info">
+                <p style="color: #000000;"><strong style="color: #000000;">Date:</strong> June 10, 2024</p>
+                <p style="color: #000000;"><strong style="color: #000000;">Time:</strong> 7:00 PM</p>
+                <p style="color: #000000;"><strong style="color: #000000;">Location:</strong> Building Common Room</p>
+            </div>
+            
+            <h4 class="agenda-title" style="color: #000000;">Agenda:</h4>
+            <ul class="agenda-list">
+                <li style="color: #000000;">Special Resolution: Building Facade Upgrade</li>
+                <li style="color: #000000;">Security System Discussion</li>
+                <li style="color: #000000;">Community Events Planning</li>
+                <li style="color: #000000;">Budget Approval</li>
+            </ul>
+            
+            <button class="blue-button">Add to Calendar</button>
+        </div>
+        
+        <h2 style="color: #000000; font-size: 20px; font-weight: bold; margin-top: 30px;">Meeting Minutes</h2>
+        
+        <ul class="minutes-list">
+            <li class="minutes-item">
+                <a href="#" class="minutes-link" style="color: #0047AB;">March 2024 Meeting Minutes</a>
+            </li>
+            <li class="minutes-item">
+                <a href="#" class="minutes-link" style="color: #0047AB;">February 2024 Meeting Minutes</a>
+            </li>
+            <li class="minutes-item">
+                <a href="#" class="minutes-link" style="color: #0047AB;">January 2024 Meeting Minutes</a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // This is just to show the page, no real functionality is needed
+        console.log("Strata Meetings page loaded");
+    </script>
+</body>
+</html> 

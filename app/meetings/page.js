@@ -9,7 +9,7 @@ export default function Meetings() {
     {
       id: 1,
       title: "Annual General Meeting",
-      date: "May 15, 2024",
+      date: "April 15, 2024",
       time: "7:00 PM",
       location: "Building Common Room",
       agenda: [
@@ -75,91 +75,102 @@ export default function Meetings() {
   ];
   
   return (
-    <div style={{fontFamily: 'Arial, sans-serif', margin: '20px', backgroundColor: '#ffffff'}}>
-      <h1 style={{color: 'black', fontSize: '24px', fontWeight: 'bold'}}>Strata Meetings</h1>
+    <div style={{backgroundColor: '#ffffff !important', color: '#000000 !important'}}>
+      <h1 style={{color: '#000000 !important', fontWeight: 'bold !important'}}>Strata Meetings</h1>
       
-      <div style={{marginBottom: '20px'}}>
-        <button style={{backgroundColor: '#0047AB', color: 'white', padding: '8px 16px', margin: '5px', border: 'none', fontWeight: 'bold'}}>
+      <div>
+        <button 
+          onClick={() => setActiveTab('upcoming')}
+          style={{
+            backgroundColor: activeTab === 'upcoming' ? '#0047AB !important' : '#cccccc !important',
+            color: activeTab === 'upcoming' ? '#ffffff !important' : '#000000 !important',
+            padding: '10px 20px',
+            margin: '5px',
+            border: 'none',
+            fontWeight: 'bold'
+          }}
+        >
           Upcoming Meetings
         </button>
-        <button style={{backgroundColor: '#cccccc', color: 'black', padding: '8px 16px', margin: '5px', border: 'none', fontWeight: 'bold'}}>
+        <button 
+          onClick={() => setActiveTab('past')}
+          style={{
+            backgroundColor: activeTab === 'past' ? '#0047AB !important' : '#cccccc !important',
+            color: activeTab === 'past' ? '#ffffff !important' : '#000000 !important',
+            padding: '10px 20px',
+            margin: '5px',
+            border: 'none',
+            fontWeight: 'bold'
+          }}
+        >
           Past Meetings
         </button>
       </div>
       
-      <h2 style={{color: 'black', fontSize: '20px', fontWeight: 'bold'}}>Upcoming Meetings</h2>
-      
-      <div style={{backgroundColor: 'white', border: '1px solid black', padding: '15px', marginBottom: '20px'}}>
-        <h3 style={{color: 'black', fontSize: '18px', fontWeight: 'bold'}}>Annual General Meeting</h3>
-        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Date:</strong> May 15, 2024</p>
-        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Time:</strong> 7:00 PM</p>
-        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Location:</strong> Building Common Room</p>
-        
-        <h4 style={{color: 'black', fontWeight: 'bold'}}>Agenda:</h4>
-        <ul style={{color: 'black'}}>
-          <li style={{color: 'black'}}>Financial Report 2023-2024</li>
-          <li style={{color: 'black'}}>Committee Elections</li>
-          <li style={{color: 'black'}}>Building Maintenance Plan</li>
-          <li style={{color: 'black'}}>General Business</li>
-        </ul>
-        
-        <button style={{backgroundColor: '#0047AB', color: 'white', padding: '8px 16px', marginTop: '10px', border: 'none', fontWeight: 'bold'}}>
-          Add to Calendar
-        </button>
-      </div>
-      
-      <div style={{backgroundColor: 'white', border: '1px solid black', padding: '15px', marginBottom: '20px'}}>
-        <h3 style={{color: 'black', fontSize: '18px', fontWeight: 'bold'}}>Committee Meeting</h3>
-        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Date:</strong> May 20, 2024</p>
-        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Time:</strong> 6:30 PM</p>
-        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Location:</strong> Online (Zoom)</p>
-        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Additional Info:</strong> Please bring your meeting materials and identification.</p>
-        
-        <h4 style={{color: 'black', fontWeight: 'bold'}}>Agenda:</h4>
-        <ul style={{color: 'black'}}>
-          <li style={{color: 'black'}}>Security System Upgrade</li>
-          <li style={{color: 'black'}}>Gardening Contract Renewal</li>
-          <li style={{color: 'black'}}>Pet Policy Review</li>
-          <li style={{color: 'black'}}>Budget Planning</li>
-        </ul>
-        
-        <button style={{backgroundColor: '#0047AB', color: 'white', padding: '8px 16px', marginTop: '10px', border: 'none', fontWeight: 'bold'}}>
-          Add to Calendar
-        </button>
-      </div>
-      
-      <div style={{backgroundColor: 'white', border: '1px solid black', padding: '15px', marginBottom: '20px'}}>
-        <h3 style={{color: 'black', fontSize: '18px', fontWeight: 'bold'}}>Special General Meeting</h3>
-        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Date:</strong> June 10, 2024</p>
-        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Time:</strong> 7:00 PM</p>
-        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Location:</strong> Building Common Room</p>
-        
-        <h4 style={{color: 'black', fontWeight: 'bold'}}>Agenda:</h4>
-        <ul style={{color: 'black'}}>
-          <li style={{color: 'black'}}>Special Resolution: Building Facade Upgrade</li>
-          <li style={{color: 'black'}}>Security System Discussion</li>
-          <li style={{color: 'black'}}>Community Events Planning</li>
-          <li style={{color: 'black'}}>Budget Approval</li>
-        </ul>
-        
-        <button style={{backgroundColor: '#0047AB', color: 'white', padding: '8px 16px', marginTop: '10px', border: 'none', fontWeight: 'bold'}}>
-          Add to Calendar
-        </button>
-      </div>
-      
-      <h2 style={{color: 'black', fontSize: '20px', fontWeight: 'bold', marginTop: '30px'}}>Meeting Minutes</h2>
-      
-      <ul style={{listStyleType: 'none', padding: 0, color: 'black'}}>
-        <li style={{backgroundColor: '#f0f0f0', padding: '10px', marginBottom: '5px', color: 'black'}}>
-          <a href="#" style={{color: '#0047AB', textDecoration: 'none'}}>March 2024 Meeting Minutes</a>
-        </li>
-        <li style={{backgroundColor: '#f0f0f0', padding: '10px', marginBottom: '5px', color: 'black'}}>
-          <a href="#" style={{color: '#0047AB', textDecoration: 'none'}}>February 2024 Meeting Minutes</a>
-        </li>
-        <li style={{backgroundColor: '#f0f0f0', padding: '10px', marginBottom: '5px', color: 'black'}}>
-          <a href="#" style={{color: '#0047AB', textDecoration: 'none'}}>January 2024 Meeting Minutes</a>
-        </li>
-      </ul>
+      {activeTab === 'upcoming' ? (
+        <>
+          <h2 style={{color: '#000000 !important', fontWeight: 'bold !important', fontSize: '20px !important'}}>Upcoming Meetings</h2>
+          
+          {upcomingMeetings.map(meeting => (
+            <div key={meeting.id} style={{
+              border: '2px solid #000000 !important',
+              backgroundColor: '#ffffff !important',
+              padding: '20px',
+              margin: '20px 0'
+            }}>
+              <h3 style={{color: '#000000 !important', fontWeight: 'bold !important', fontSize: '18px !important'}}>{meeting.title}</h3>
+              <p style={{color: '#000000 !important'}}><strong style={{color: '#000000 !important'}}>Date:</strong> {meeting.date}</p>
+              <p style={{color: '#000000 !important'}}><strong style={{color: '#000000 !important'}}>Time:</strong> {meeting.time}</p>
+              <p style={{color: '#000000 !important'}}><strong style={{color: '#000000 !important'}}>Location:</strong> {meeting.location}</p>
+              
+              <h4 style={{color: '#000000 !important', fontWeight: 'bold !important'}}>Agenda:</h4>
+              <ul style={{listStyleType: 'disc', marginLeft: '20px'}}>
+                {meeting.agenda.map((item, index) => (
+                  <li key={index} style={{color: '#000000 !important', marginBottom: '5px'}}>{item}</li>
+                ))}
+              </ul>
+              
+              <button style={{
+                backgroundColor: '#0047AB !important',
+                color: '#ffffff !important',
+                border: 'none',
+                padding: '10px 15px',
+                fontWeight: 'bold',
+                marginTop: '10px'
+              }}>
+                Add to Calendar
+              </button>
+            </div>
+          ))}
+        </>
+      ) : (
+        <>
+          <h2 style={{color: '#000000 !important', fontWeight: 'bold !important', fontSize: '20px !important'}}>Meeting Minutes</h2>
+          
+          <ul style={{listStyleType: 'none', padding: 0}}>
+            {pastMeetings.map(meeting => (
+              <li key={meeting.id} style={{
+                backgroundColor: '#f0f0f0 !important',
+                padding: '10px',
+                marginBottom: '5px'
+              }}>
+                <p style={{color: '#000000 !important', margin: '5px 0'}}><strong style={{color: '#000000 !important'}}>{meeting.title}</strong> - {meeting.date}</p>
+                <a 
+                  href={`/documents/${meeting.minutes}`} 
+                  target="_blank"
+                  style={{
+                    color: '#0047AB !important',
+                    textDecoration: 'none',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  Download Minutes
+                </a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
     </div>
   );
 } 
