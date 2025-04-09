@@ -25,7 +25,7 @@ export default function Financial() {
           <input 
             type="number" 
             id="entitlement" 
-            className="border p-2 w-40" 
+            className="border p-2 w-40 bg-white text-black" 
             defaultValue="10" 
           />
         </div>
