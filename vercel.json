@@ -32,10 +32,6 @@
     {
       "path": "/api/maintenance-reminder",
       "schedule": "0 9 * * 1"
-    },
-    {
-      "path": "/api/send-meeting-reminders",
-      "schedule": "0 12 * * 4"
     }
   ],
   "env": {
