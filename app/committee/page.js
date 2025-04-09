@@ -15,7 +15,7 @@ export default function Committee() {
         {members.map((member, index) => (
           <div key={index} className="bg-white p-6 rounded shadow">
             <h2 className="text-xl font-medium text-gray-800">{member.name}</h2>
-            <p className="text-blue-700">{member.role}</p>
+            <p className="text-gray-800 font-semibold">{member.role}</p>
             <p className="text-gray-600">{member.email}</p>
           </div>
         ))}
