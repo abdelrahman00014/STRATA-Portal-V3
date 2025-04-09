@@ -37,12 +37,5 @@
   "env": {
     "NODE_ENV": "production",
     "STRATA_API_URL": "https://api.stratasphere.example.com"
-  },
-  "redirects": [
-    { 
-      "source": "/documents", 
-      "destination": "/documents/index", 
-      "permanent": true 
-    }
-  ]
+  }
 }
