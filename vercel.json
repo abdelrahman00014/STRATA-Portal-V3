@@ -2,6 +2,9 @@
   "version": 2,
   "regions": ["syd1"],
   "framework": "nextjs",
+  "buildCommand": "next build",
+  "installCommand": "npm install",
+  "outputDirectory": ".next",
   "headers": [
     {
       "source": "/(.*)",
@@ -17,8 +20,33 @@
         {
           "key": "X-XSS-Protection",
           "value": "1; mode=block"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
         }
       ]
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/maintenance-reminder",
+      "schedule": "0 9 * * 1"
+    },
+    {
+      "path": "/api/send-meeting-reminders",
+      "schedule": "0 12 * * 4"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "STRATA_API_URL": "https://api.stratasphere.example.com"
+  },
+  "redirects": [
+    { 
+      "source": "/documents", 
+      "destination": "/documents/index", 
+      "permanent": true 
     }
   ]
 }
