@@ -9,11 +9,11 @@ export default function Meetings() {
     {
       id: 1,
       title: "Annual General Meeting",
-      date: "May 15, 2025",
+      date: "May 15, 2024",
       time: "7:00 PM",
       location: "Building Common Room",
       agenda: [
-        "Financial Report 2024-2025",
+        "Financial Report 2023-2024",
         "Committee Elections",
         "Building Maintenance Plan",
         "General Business"
@@ -22,7 +22,7 @@ export default function Meetings() {
     {
       id: 2,
       title: "Committee Meeting",
-      date: "April 20, 2025",
+      date: "May 20, 2024",
       time: "6:30 PM",
       location: "Online (Zoom)",
       agenda: [
@@ -35,8 +35,8 @@ export default function Meetings() {
     {
       id: 6,
       title: "Special General Meeting",
-      date: "June 30, 2025",
-      time: "7:30 PM",
+      date: "June 10, 2024",
+      time: "7:00 PM",
       location: "Building Common Room",
       agenda: [
         "Special Resolution: Building Facade Upgrade",
@@ -51,72 +51,101 @@ export default function Meetings() {
     {
       id: 3,
       title: "Special General Meeting",
-      date: "January 10, 2025",
+      date: "January 10, 2024",
       time: "7:00 PM",
       location: "Building Common Room",
-      minutes: "meeting-minutes-jan-2025.pdf"
+      minutes: "meeting-minutes-jan-2024.pdf"
     },
     {
       id: 4,
       title: "Committee Meeting",
-      date: "February 15, 2025",
+      date: "February 15, 2024",
       time: "6:30 PM",
       location: "Online (Zoom)",
-      minutes: "meeting-minutes-feb-2025.pdf"
+      minutes: "meeting-minutes-feb-2024.pdf"
     },
     {
       id: 5,
       title: "Building Maintenance Discussion",
-      date: "March 5, 2025",
+      date: "March 5, 2024",
       time: "5:30 PM",
       location: "Building Common Room",
-      minutes: "maintenance-discussion-mar-2025.pdf"
+      minutes: "maintenance-discussion-mar-2024.pdf"
     }
   ];
   
   return (
-    <div className="container mx-auto px-4 py-8 bg-slate-100">
-      <h1 className="text-3xl font-bold mb-6 text-gray-900">Strata Meetings</h1>
+    <div style={{backgroundColor: 'white', padding: '2rem', minHeight: '100vh'}}>
+      <h1 style={{fontSize: '1.875rem', fontWeight: 'bold', marginBottom: '1.5rem', color: '#1f2937'}}>Strata Meetings</h1>
       
-      <div className="flex space-x-2 mb-6">
+      <div style={{display: 'flex', gap: '0.5rem', marginBottom: '1.5rem'}}>
         <button 
           onClick={() => setActiveTab('upcoming')}
-          className={`px-4 py-2 rounded font-medium ${activeTab === 'upcoming' ? 'bg-blue-700 text-white' : 'bg-gray-300 text-gray-900'}`}
+          style={{
+            padding: '0.5rem 1rem', 
+            borderRadius: '0.25rem', 
+            fontWeight: '500',
+            backgroundColor: activeTab === 'upcoming' ? '#1d4ed8' : '#d1d5db',
+            color: activeTab === 'upcoming' ? 'white' : '#1f2937'
+          }}
         >
-          <span className={activeTab === 'upcoming' ? 'text-white' : 'text-gray-900'}>Upcoming Meetings</span>
+          Upcoming Meetings
         </button>
         <button 
           onClick={() => setActiveTab('past')}
-          className={`px-4 py-2 rounded font-medium ${activeTab === 'past' ? 'bg-blue-700 text-white' : 'bg-gray-300 text-gray-900'}`}
+          style={{
+            padding: '0.5rem 1rem', 
+            borderRadius: '0.25rem', 
+            fontWeight: '500',
+            backgroundColor: activeTab === 'past' ? '#1d4ed8' : '#d1d5db',
+            color: activeTab === 'past' ? 'white' : '#1f2937'
+          }}
         >
-          <span className={activeTab === 'past' ? 'text-white' : 'text-gray-900'}>Past Meetings</span>
+          Past Meetings
         </button>
       </div>
       
       {activeTab === 'upcoming' ? (
         <div>
-          <p className="mb-4 text-gray-900 font-medium">Below are the upcoming meetings scheduled for our strata community. All residents are welcome to attend.</p>
+          <p style={{marginBottom: '1rem', color: '#1f2937', fontWeight: '500'}}>
+            Below are the upcoming meetings scheduled for our strata community. All residents are welcome to attend.
+          </p>
           
-          <div className="space-y-6">
+          <div style={{display: 'flex', flexDirection: 'column', gap: '1.5rem'}}>
             {upcomingMeetings.map(meeting => (
-              <div key={meeting.id} className="bg-white p-6 rounded shadow border border-gray-300">
-                <h2 className="text-xl font-bold mb-2 text-gray-900">{meeting.title}</h2>
-                <div className="mb-4">
-                  <p className="text-gray-900"><span className="font-bold">Date:</span> {meeting.date}</p>
-                  <p className="text-gray-900"><span className="font-bold">Time:</span> {meeting.time}</p>
-                  <p className="text-gray-900"><span className="font-bold">Location:</span> {meeting.location}</p>
+              <div key={meeting.id} style={{
+                backgroundColor: 'white', 
+                padding: '1.5rem', 
+                borderRadius: '0.5rem', 
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                border: '1px solid #d1d5db'
+              }}>
+                <h2 style={{fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem', color: '#1f2937'}}>{meeting.title}</h2>
+                <div style={{marginBottom: '1rem'}}>
+                  <p style={{color: '#1f2937'}}><span style={{fontWeight: 'bold', color: '#1f2937'}}>Date:</span> {meeting.date}</p>
+                  <p style={{color: '#1f2937'}}><span style={{fontWeight: 'bold', color: '#1f2937'}}>Time:</span> {meeting.time}</p>
+                  <p style={{color: '#1f2937'}}><span style={{fontWeight: 'bold', color: '#1f2937'}}>Location:</span> {meeting.location}</p>
                 </div>
                 
                 <div>
-                  <h3 className="font-bold mb-2 text-gray-900">Agenda:</h3>
-                  <ul className="list-disc pl-5">
+                  <h3 style={{fontWeight: 'bold', marginBottom: '0.5rem', color: '#1f2937'}}>Agenda:</h3>
+                  <ul style={{listStyleType: 'disc', paddingLeft: '1.25rem'}}>
                     {meeting.agenda.map((item, index) => (
-                      <li key={index} className="text-gray-900">{item}</li>
+                      <li key={index} style={{color: '#1f2937'}}>{item}</li>
                     ))}
                   </ul>
                 </div>
                 
-                <button className="mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold px-4 py-2 rounded">
+                <button style={{
+                  marginTop: '1rem', 
+                  backgroundColor: '#1d4ed8', 
+                  color: 'white', 
+                  fontWeight: 'bold', 
+                  padding: '0.5rem 1rem', 
+                  borderRadius: '0.25rem',
+                  border: 'none',
+                  cursor: 'pointer'
+                }}>
                   Add to Calendar
                 </button>
               </div>
@@ -125,20 +154,36 @@ export default function Meetings() {
         </div>
       ) : (
         <div>
-          <p className="mb-4 text-gray-900 font-medium">Past meetings with downloadable minutes for your reference.</p>
+          <p style={{marginBottom: '1rem', color: '#1f2937', fontWeight: '500'}}>
+            Past meetings with downloadable minutes for your reference.
+          </p>
           
-          <div className="space-y-6">
+          <div style={{display: 'flex', flexDirection: 'column', gap: '1.5rem'}}>
             {pastMeetings.map(meeting => (
-              <div key={meeting.id} className="bg-white p-6 rounded shadow border border-gray-300">
-                <h2 className="text-xl font-bold mb-2 text-gray-900">{meeting.title}</h2>
-                <div className="mb-4">
-                  <p className="text-gray-900"><span className="font-bold">Date:</span> {meeting.date}</p>
-                  <p className="text-gray-900"><span className="font-bold">Time:</span> {meeting.time}</p>
-                  <p className="text-gray-900"><span className="font-bold">Location:</span> {meeting.location}</p>
+              <div key={meeting.id} style={{
+                backgroundColor: 'white', 
+                padding: '1.5rem', 
+                borderRadius: '0.5rem', 
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                border: '1px solid #d1d5db'
+              }}>
+                <h2 style={{fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem', color: '#1f2937'}}>{meeting.title}</h2>
+                <div style={{marginBottom: '1rem'}}>
+                  <p style={{color: '#1f2937'}}><span style={{fontWeight: 'bold', color: '#1f2937'}}>Date:</span> {meeting.date}</p>
+                  <p style={{color: '#1f2937'}}><span style={{fontWeight: 'bold', color: '#1f2937'}}>Time:</span> {meeting.time}</p>
+                  <p style={{color: '#1f2937'}}><span style={{fontWeight: 'bold', color: '#1f2937'}}>Location:</span> {meeting.location}</p>
                 </div>
                 
                 <button 
-                  className="bg-green-700 hover:bg-green-800 text-white font-bold px-4 py-2 rounded"
+                  style={{
+                    backgroundColor: '#15803d', 
+                    color: 'white', 
+                    fontWeight: 'bold', 
+                    padding: '0.5rem 1rem', 
+                    borderRadius: '0.25rem',
+                    border: 'none',
+                    cursor: 'pointer'
+                  }}
                   onClick={() => window.open(`/documents/${meeting.minutes}`, '_blank')}
                 >
                   Download Minutes
