@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strata Bylaws</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            color: #000000;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        h1 {
+            color: #000000;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #000000;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #000000;
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #000000;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .bylaw-section {
+            background-color: #ffffff;
+            border: 2px solid #000000;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .bylaw-content {
+            color: #000000;
+        }
+        ul {
+            margin-bottom: 15px;
+            color: #000000;
+        }
+        li {
+            color: #000000;
+            margin-bottom: 8px;
+        }
+        .nav-tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+        .nav-tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #f0f0f0;
+            color: #000000;
+            border: none;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        .nav-tab.active {
+            background-color: #0047AB;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Strata Bylaws</h1>
+        
+        <div class="nav-tabs">
+            <button class="nav-tab active">General Rules</button>
+            <button class="nav-tab">Parking Rules</button>
+            <button class="nav-tab">Pet Rules</button>
+        </div>
+
+        <div class="bylaw-section">
+            <h2>General Rules</h2>
+            <div class="bylaw-content">
+                <p>These general rules apply to all residents and visitors of the building:</p>
+                <ul>
+                    <li>Quiet hours are from 10 PM to 7 AM</li>
+                    <li>No smoking in common areas</li>
+                    <li>Keep common areas clean and tidy</li>
+                    <li>Report maintenance issues promptly</li>
+                    <li>No alterations to external appearance without committee approval</li>
+                    <li>Disposal of large items must be arranged with management</li>
+                    <li>Entry doors must not be propped open</li>
+                    <li>All residents must maintain current contact information with management</li>
+                </ul>
+                <p>Residents are responsible for ensuring their guests comply with all bylaws during their visit.</p>
+            </div>
+        </div>
+
+        <div class="bylaw-section">
+            <h2>Parking Rules</h2>
+            <div class="bylaw-content">
+                <p>All vehicle parking within the property is subject to the following rules:</p>
+                <ul>
+                    <li>Park only in designated spots</li>
+                    <li>No overnight guest parking without permission</li>
+                    <li>Keep driveways clear at all times</li>
+                    <li>No vehicle maintenance in parking areas</li>
+                    <li>Speed limit of 5 km/h in all parking areas</li>
+                    <li>No storage of unregistered vehicles</li>
+                    <li>No washing of vehicles in parking areas</li>
+                    <li>Visitor parking limited to 24 hours unless approved</li>
+                </ul>
+                <p>Violations of parking rules may result in vehicles being towed at the owner's expense.</p>
+            </div>
+        </div>
+
+        <div class="bylaw-section">
+            <h2>Pet Rules</h2>
+            <div class="bylaw-content">
+                <p>Pets are allowed within the building subject to the following conditions:</p>
+                <ul>
+                    <li>Pets must be on leash in common areas</li>
+                    <li>Clean up after your pets</li>
+                    <li>No pets allowed in pool area</li>
+                    <li>Maximum 2 pets per unit</li>
+                    <li>All pets must be registered with management</li>
+                    <li>No exotic animals permitted</li>
+                    <li>Pets must not create excessive noise</li>
+                    <li>Pet owners are responsible for any damage caused by their pets</li>
+                </ul>
+                <p>The committee reserves the right to revoke pet permissions for repeated bylaw violations.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple tab navigation
+        const tabs = document.querySelectorAll('.nav-tab');
+        const sections = document.querySelectorAll('.bylaw-section');
+        
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                // Hide all sections
+                sections.forEach(section => {
+                    section.style.display = 'none';
+                });
+                
+                // Show selected section
+                sections[index].style.display = 'block';
+                
+                // Update active tab
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+        
+        // Show first section by default
+        sections.forEach((section, index) => {
+            if (index > 0) {
+                section.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html> 

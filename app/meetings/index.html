@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strata Meetings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            color: #000000;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        h1 {
+            color: #000000;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #000000;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #000000;
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        h4 {
+            color: #000000;
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #000000;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        strong {
+            font-weight: bold;
+            color: #000000;
+        }
+        .meeting-card {
+            background-color: #ffffff;
+            border: 2px solid #000000;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        ul {
+            margin-bottom: 15px;
+            color: #000000;
+        }
+        li {
+            color: #000000;
+            margin-bottom: 8px;
+        }
+        .nav-tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+        .nav-tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #f0f0f0;
+            color: #000000;
+            border: none;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        .nav-tab.active {
+            background-color: #0047AB;
+            color: white;
+        }
+        .button {
+            display: inline-block;
+            background-color: #0047AB;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .minutes-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        .minutes-item {
+            background-color: #f0f0f0;
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+        .minutes-link {
+            color: #0047AB;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Strata Meetings</h1>
+        
+        <div class="nav-tabs">
+            <button class="nav-tab active">Upcoming Meetings</button>
+            <button class="nav-tab">Past Meetings</button>
+        </div>
+
+        <div id="upcoming-meetings">
+            <h2>Upcoming Meetings</h2>
+            
+            <div class="meeting-card">
+                <h3>Annual General Meeting</h3>
+                <p><strong>Date:</strong> April 15, 2024</p>
+                <p><strong>Time:</strong> 7:00 PM</p>
+                <p><strong>Location:</strong> Building Common Room</p>
+                
+                <h4>Agenda:</h4>
+                <ul>
+                    <li>Financial Report 2023-2024</li>
+                    <li>Committee Elections</li>
+                    <li>Building Maintenance Plan</li>
+                    <li>General Business</li>
+                </ul>
+                
+                <button class="button">Add to Calendar</button>
+            </div>
+            
+            <div class="meeting-card">
+                <h3>Committee Meeting</h3>
+                <p><strong>Date:</strong> May 20, 2024</p>
+                <p><strong>Time:</strong> 6:30 PM</p>
+                <p><strong>Location:</strong> Online (Zoom)</p>
+                <p><strong>Additional Info:</strong> Please bring your meeting materials and identification.</p>
+                
+                <h4>Agenda:</h4>
+                <ul>
+                    <li>Security System Upgrade</li>
+                    <li>Gardening Contract Renewal</li>
+                    <li>Pet Policy Review</li>
+                    <li>Budget Planning</li>
+                </ul>
+                
+                <button class="button">Add to Calendar</button>
+            </div>
+            
+            <div class="meeting-card">
+                <h3>Special General Meeting</h3>
+                <p><strong>Date:</strong> June 10, 2024</p>
+                <p><strong>Time:</strong> 7:00 PM</p>
+                <p><strong>Location:</strong> Building Common Room</p>
+                
+                <h4>Agenda:</h4>
+                <ul>
+                    <li>Special Resolution: Building Facade Upgrade</li>
+                    <li>Security System Discussion</li>
+                    <li>Community Events Planning</li>
+                    <li>Budget Approval</li>
+                </ul>
+                
+                <button class="button">Add to Calendar</button>
+            </div>
+        </div>
+
+        <div id="past-meetings" style="display: none;">
+            <h2>Meeting Minutes</h2>
+            
+            <ul class="minutes-list">
+                <li class="minutes-item">
+                    <p><strong>Special General Meeting - January 10, 2024</strong></p>
+                    <p>Location: Building Common Room</p>
+                    <a href="#" class="minutes-link">Download Minutes</a>
+                </li>
+                <li class="minutes-item">
+                    <p><strong>Committee Meeting - February 15, 2024</strong></p>
+                    <p>Location: Online (Zoom)</p>
+                    <a href="#" class="minutes-link">Download Minutes</a>
+                </li>
+                <li class="minutes-item">
+                    <p><strong>Building Maintenance Discussion - March 5, 2024</strong></p>
+                    <p>Location: Building Common Room</p>
+                    <a href="#" class="minutes-link">Download Minutes</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Simple tab navigation
+        const tabs = document.querySelectorAll('.nav-tab');
+        const sections = document.querySelectorAll('#upcoming-meetings, #past-meetings');
+        
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                // Hide all sections
+                sections.forEach(section => {
+                    section.style.display = 'none';
+                });
+                
+                // Show selected section
+                sections[index].style.display = 'block';
+                
+                // Update active tab
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html> 
