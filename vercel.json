@@ -9,5 +9,10 @@
   ],
   "rewrites": [
     { "source": "/:path*", "destination": "/" }
-  ]
+  ],
+  "build": {
+    "env": {
+      "PNPM_FLAGS": "--no-frozen-lockfile"
+    }
+  }
 }
