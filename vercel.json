@@ -1,8 +1,6 @@
 {
   "version": 2,
   "regions": ["syd1"],
-  "buildCommand": "pnpm install --no-frozen-lockfile && next build",
-  "installCommand": "pnpm install",
   "framework": "nextjs",
   "headers": [
     {
@@ -21,31 +19,6 @@
           "value": "1; mode=block"
         }
       ]
-    },
-    {
-      "source": "/api/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-store, max-age=0"
-        }
-      ]
-    }
-  ],
-  "crons": [
-    {
-      "path": "/api/maintenance-reminder",
-      "schedule": "0 9 * * MON"
-    }
-  ],
-  "rewrites": [
-    { "source": "/privacy", "destination": "/legal/privacy-policy" }
-  ],
-  "redirects": [
-    { 
-      "source": "/old-committee", 
-      "destination": "/committee",
-      "permanent": true
     }
   ]
 }

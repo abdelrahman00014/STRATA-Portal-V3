@@ -3,7 +3,18 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-const documentCategories = [
+interface Document {
+  name: string;
+  url: string;
+}
+
+interface DocumentCategory {
+  id: string;
+  name: string;
+  documents: Document[];
+}
+
+const documentCategories: DocumentCategory[] = [
   {
     id: 'bylaws',
     name: 'Bylaws',
