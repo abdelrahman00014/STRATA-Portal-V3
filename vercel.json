@@ -1,18 +1,51 @@
 {
   "version": 2,
   "regions": ["syd1"],
+  "buildCommand": "pnpm install --no-frozen-lockfile && next build",
+  "installCommand": "pnpm install",
+  "framework": "nextjs",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, max-age=0"
+        }
+      ]
+    }
+  ],
   "crons": [
     {
-      "path": "/api/send-meeting-reminders",
-      "schedule": "0 9 * * 1"
+      "path": "/api/maintenance-reminder",
+      "schedule": "0 9 * * MON"
     }
   ],
   "rewrites": [
-    { "source": "/:path*", "destination": "/" }
+    { "source": "/privacy", "destination": "/legal/privacy-policy" }
   ],
-  "build": {
-    "env": {
-      "PNPM_FLAGS": "--no-frozen-lockfile"
+  "redirects": [
+    { 
+      "source": "/old-committee", 
+      "destination": "/committee",
+      "permanent": true
     }
-  }
+  ]
 }
