@@ -1,60 +1,43 @@
-export const runtime = 'edge';
+import { config } from '../../config';
+import { NextResponse } from 'next/server';
 
 /**
- * Edge function for sending maintenance reminders
- * This is called by a cron job every Monday at 9am as configured in vercel.json
- * It's ideal for edge functions because it's a scheduled task that benefits from
- * global distribution and minimal cold start times
+ * API route that demonstrates using environment variables
+ * This route is configured to run as a cron job in vercel.json
  */
-export async function GET(request) {
+export async function GET() {
   try {
-    // Get current date
-    const now = new Date();
-    const formattedDate = now.toISOString().split('T')[0];
-    
-    // In a real application, we would:
-    // 1. Query scheduled maintenance from a database
-    // 2. Find all users who need notifications
-    // 3. Send emails or push notifications
-    
-    // For demonstration, we're just logging the execution
-    console.log(`Maintenance reminder cron job executed at ${now.toISOString()}`);
-    
-    // Mock sending notifications
-    const notificationsSent = {
-      poolMaintenance: {
-        date: "2025-06-15",
-        recipients: 120,
-        message: "Reminder: Pool will be closed for maintenance next week"
-      },
-      elevatorInspection: {
-        date: "2025-06-20",
-        recipients: 245,
-        message: "Reminder: Elevator inspection scheduled for Friday"
-      }
+    // Check if we're in maintenance mode
+    if (config.features.maintenanceMode) {
+      return NextResponse.json(
+        { success: false, message: 'System is in maintenance mode' },
+        { status: 503 }
+      );
+    }
+
+    // Demonstrate accessing environment variables
+    const apiInfo = {
+      apiUrl: config.apiUrl,
+      environment: config.buildInfo.environment,
+      notificationsEnabled: config.features.enableNotifications,
+      siteName: config.siteName,
     };
     
-    // Return success response
-    return new Response(JSON.stringify({ 
+    // In a real implementation, this would send maintenance reminders
+    // using the EMAIL_SERVICE_API_KEY
+    
+    return NextResponse.json({
       success: true,
-      executed: now.toISOString(),
-      notificationsSent
-    }), {
-      status: 200,
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      message: 'Maintenance reminder API endpoint',
+      timestamp: new Date().toISOString(),
+      apiInfo,
+      // Don't expose sensitive information like API keys in responses
     });
   } catch (error) {
-    // Return error response
-    return new Response(JSON.stringify({ 
-      error: "Failed to process maintenance reminders",
-      details: error.message
-    }), {
-      status: 500,
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
+    console.error('Error in maintenance-reminder API:', error);
+    return NextResponse.json(
+      { success: false, message: 'Internal server error' },
+      { status: 500 }
+    );
   }
 } 
