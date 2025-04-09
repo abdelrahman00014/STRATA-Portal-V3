@@ -75,124 +75,91 @@ export default function Meetings() {
   ];
   
   return (
-    <div style={{backgroundColor: 'white', padding: '2rem', minHeight: '100vh'}}>
-      <h1 style={{fontSize: '1.875rem', fontWeight: 'bold', marginBottom: '1.5rem', color: '#1f2937'}}>Strata Meetings</h1>
+    <div style={{fontFamily: 'Arial, sans-serif', margin: '20px', backgroundColor: '#ffffff'}}>
+      <h1 style={{color: 'black', fontSize: '24px', fontWeight: 'bold'}}>Strata Meetings</h1>
       
-      <div style={{display: 'flex', gap: '0.5rem', marginBottom: '1.5rem'}}>
-        <button 
-          onClick={() => setActiveTab('upcoming')}
-          style={{
-            padding: '0.5rem 1rem', 
-            borderRadius: '0.25rem', 
-            fontWeight: '500',
-            backgroundColor: activeTab === 'upcoming' ? '#1d4ed8' : '#d1d5db',
-            color: activeTab === 'upcoming' ? 'white' : '#1f2937'
-          }}
-        >
+      <div style={{marginBottom: '20px'}}>
+        <button style={{backgroundColor: '#0047AB', color: 'white', padding: '8px 16px', margin: '5px', border: 'none', fontWeight: 'bold'}}>
           Upcoming Meetings
         </button>
-        <button 
-          onClick={() => setActiveTab('past')}
-          style={{
-            padding: '0.5rem 1rem', 
-            borderRadius: '0.25rem', 
-            fontWeight: '500',
-            backgroundColor: activeTab === 'past' ? '#1d4ed8' : '#d1d5db',
-            color: activeTab === 'past' ? 'white' : '#1f2937'
-          }}
-        >
+        <button style={{backgroundColor: '#cccccc', color: 'black', padding: '8px 16px', margin: '5px', border: 'none', fontWeight: 'bold'}}>
           Past Meetings
         </button>
       </div>
       
-      {activeTab === 'upcoming' ? (
-        <div>
-          <p style={{marginBottom: '1rem', color: '#1f2937', fontWeight: '500'}}>
-            Below are the upcoming meetings scheduled for our strata community. All residents are welcome to attend.
-          </p>
-          
-          <div style={{display: 'flex', flexDirection: 'column', gap: '1.5rem'}}>
-            {upcomingMeetings.map(meeting => (
-              <div key={meeting.id} style={{
-                backgroundColor: 'white', 
-                padding: '1.5rem', 
-                borderRadius: '0.5rem', 
-                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-                border: '1px solid #d1d5db'
-              }}>
-                <h2 style={{fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem', color: '#1f2937'}}>{meeting.title}</h2>
-                <div style={{marginBottom: '1rem'}}>
-                  <p style={{color: '#1f2937'}}><span style={{fontWeight: 'bold', color: '#1f2937'}}>Date:</span> {meeting.date}</p>
-                  <p style={{color: '#1f2937'}}><span style={{fontWeight: 'bold', color: '#1f2937'}}>Time:</span> {meeting.time}</p>
-                  <p style={{color: '#1f2937'}}><span style={{fontWeight: 'bold', color: '#1f2937'}}>Location:</span> {meeting.location}</p>
-                </div>
-                
-                <div>
-                  <h3 style={{fontWeight: 'bold', marginBottom: '0.5rem', color: '#1f2937'}}>Agenda:</h3>
-                  <ul style={{listStyleType: 'disc', paddingLeft: '1.25rem'}}>
-                    {meeting.agenda.map((item, index) => (
-                      <li key={index} style={{color: '#1f2937'}}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <button style={{
-                  marginTop: '1rem', 
-                  backgroundColor: '#1d4ed8', 
-                  color: 'white', 
-                  fontWeight: 'bold', 
-                  padding: '0.5rem 1rem', 
-                  borderRadius: '0.25rem',
-                  border: 'none',
-                  cursor: 'pointer'
-                }}>
-                  Add to Calendar
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      ) : (
-        <div>
-          <p style={{marginBottom: '1rem', color: '#1f2937', fontWeight: '500'}}>
-            Past meetings with downloadable minutes for your reference.
-          </p>
-          
-          <div style={{display: 'flex', flexDirection: 'column', gap: '1.5rem'}}>
-            {pastMeetings.map(meeting => (
-              <div key={meeting.id} style={{
-                backgroundColor: 'white', 
-                padding: '1.5rem', 
-                borderRadius: '0.5rem', 
-                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-                border: '1px solid #d1d5db'
-              }}>
-                <h2 style={{fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem', color: '#1f2937'}}>{meeting.title}</h2>
-                <div style={{marginBottom: '1rem'}}>
-                  <p style={{color: '#1f2937'}}><span style={{fontWeight: 'bold', color: '#1f2937'}}>Date:</span> {meeting.date}</p>
-                  <p style={{color: '#1f2937'}}><span style={{fontWeight: 'bold', color: '#1f2937'}}>Time:</span> {meeting.time}</p>
-                  <p style={{color: '#1f2937'}}><span style={{fontWeight: 'bold', color: '#1f2937'}}>Location:</span> {meeting.location}</p>
-                </div>
-                
-                <button 
-                  style={{
-                    backgroundColor: '#15803d', 
-                    color: 'white', 
-                    fontWeight: 'bold', 
-                    padding: '0.5rem 1rem', 
-                    borderRadius: '0.25rem',
-                    border: 'none',
-                    cursor: 'pointer'
-                  }}
-                  onClick={() => window.open(`/documents/${meeting.minutes}`, '_blank')}
-                >
-                  Download Minutes
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+      <h2 style={{color: 'black', fontSize: '20px', fontWeight: 'bold'}}>Upcoming Meetings</h2>
+      
+      <div style={{backgroundColor: 'white', border: '1px solid black', padding: '15px', marginBottom: '20px'}}>
+        <h3 style={{color: 'black', fontSize: '18px', fontWeight: 'bold'}}>Annual General Meeting</h3>
+        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Date:</strong> May 15, 2024</p>
+        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Time:</strong> 7:00 PM</p>
+        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Location:</strong> Building Common Room</p>
+        
+        <h4 style={{color: 'black', fontWeight: 'bold'}}>Agenda:</h4>
+        <ul style={{color: 'black'}}>
+          <li style={{color: 'black'}}>Financial Report 2023-2024</li>
+          <li style={{color: 'black'}}>Committee Elections</li>
+          <li style={{color: 'black'}}>Building Maintenance Plan</li>
+          <li style={{color: 'black'}}>General Business</li>
+        </ul>
+        
+        <button style={{backgroundColor: '#0047AB', color: 'white', padding: '8px 16px', marginTop: '10px', border: 'none', fontWeight: 'bold'}}>
+          Add to Calendar
+        </button>
+      </div>
+      
+      <div style={{backgroundColor: 'white', border: '1px solid black', padding: '15px', marginBottom: '20px'}}>
+        <h3 style={{color: 'black', fontSize: '18px', fontWeight: 'bold'}}>Committee Meeting</h3>
+        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Date:</strong> May 20, 2024</p>
+        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Time:</strong> 6:30 PM</p>
+        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Location:</strong> Online (Zoom)</p>
+        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Additional Info:</strong> Please bring your meeting materials and identification.</p>
+        
+        <h4 style={{color: 'black', fontWeight: 'bold'}}>Agenda:</h4>
+        <ul style={{color: 'black'}}>
+          <li style={{color: 'black'}}>Security System Upgrade</li>
+          <li style={{color: 'black'}}>Gardening Contract Renewal</li>
+          <li style={{color: 'black'}}>Pet Policy Review</li>
+          <li style={{color: 'black'}}>Budget Planning</li>
+        </ul>
+        
+        <button style={{backgroundColor: '#0047AB', color: 'white', padding: '8px 16px', marginTop: '10px', border: 'none', fontWeight: 'bold'}}>
+          Add to Calendar
+        </button>
+      </div>
+      
+      <div style={{backgroundColor: 'white', border: '1px solid black', padding: '15px', marginBottom: '20px'}}>
+        <h3 style={{color: 'black', fontSize: '18px', fontWeight: 'bold'}}>Special General Meeting</h3>
+        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Date:</strong> June 10, 2024</p>
+        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Time:</strong> 7:00 PM</p>
+        <p style={{color: 'black'}}><strong style={{color: 'black'}}>Location:</strong> Building Common Room</p>
+        
+        <h4 style={{color: 'black', fontWeight: 'bold'}}>Agenda:</h4>
+        <ul style={{color: 'black'}}>
+          <li style={{color: 'black'}}>Special Resolution: Building Facade Upgrade</li>
+          <li style={{color: 'black'}}>Security System Discussion</li>
+          <li style={{color: 'black'}}>Community Events Planning</li>
+          <li style={{color: 'black'}}>Budget Approval</li>
+        </ul>
+        
+        <button style={{backgroundColor: '#0047AB', color: 'white', padding: '8px 16px', marginTop: '10px', border: 'none', fontWeight: 'bold'}}>
+          Add to Calendar
+        </button>
+      </div>
+      
+      <h2 style={{color: 'black', fontSize: '20px', fontWeight: 'bold', marginTop: '30px'}}>Meeting Minutes</h2>
+      
+      <ul style={{listStyleType: 'none', padding: 0, color: 'black'}}>
+        <li style={{backgroundColor: '#f0f0f0', padding: '10px', marginBottom: '5px', color: 'black'}}>
+          <a href="#" style={{color: '#0047AB', textDecoration: 'none'}}>March 2024 Meeting Minutes</a>
+        </li>
+        <li style={{backgroundColor: '#f0f0f0', padding: '10px', marginBottom: '5px', color: 'black'}}>
+          <a href="#" style={{color: '#0047AB', textDecoration: 'none'}}>February 2024 Meeting Minutes</a>
+        </li>
+        <li style={{backgroundColor: '#f0f0f0', padding: '10px', marginBottom: '5px', color: 'black'}}>
+          <a href="#" style={{color: '#0047AB', textDecoration: 'none'}}>January 2024 Meeting Minutes</a>
+        </li>
+      </ul>
     </div>
   );
 } 
