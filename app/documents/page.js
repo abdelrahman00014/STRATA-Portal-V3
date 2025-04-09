@@ -70,7 +70,7 @@ export default function DocumentsPage() {
             placeholder="Search documents..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border rounded text-gray-800"
           />
         </div>
 
@@ -84,13 +84,13 @@ export default function DocumentsPage() {
                 <span className="font-medium text-gray-800">{doc.name}</span>
                 <div className="space-x-2">
                   <button
-                    className="bg-blue-500 text-white px-4 py-2 rounded"
+                    className="bg-blue-500 text-white font-medium px-4 py-2 rounded"
                     onClick={() => window.open(doc.url, '_blank')}
                   >
-                    View
+                    <span className="text-white">View</span>
                   </button>
                   <button
-                    className="bg-green-500 text-white px-4 py-2 rounded"
+                    className="bg-green-500 text-white font-medium px-4 py-2 rounded"
                     onClick={() => {
                       const link = document.createElement('a');
                       link.href = doc.url;
@@ -100,7 +100,7 @@ export default function DocumentsPage() {
                       document.body.removeChild(link);
                     }}
                   >
-                    Download
+                    <span className="text-white">Download</span>
                   </button>
                 </div>
               </div>
